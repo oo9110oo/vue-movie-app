@@ -108,6 +108,11 @@ export default {
                     movies: [],
                     message: message
                 })
+            // } catch ({ message }) {
+            //     context.commit('updateState', {
+            //         movies: [],
+            //         message: message
+            //     })
             } finally {
                 context.commit('updateState', {
                     loading: false
@@ -160,5 +165,8 @@ function _fetchMovie(payload) {        //변수명 앞에 _ 을 붙이면 이 �
             reject(err.message)
         })
     })
-    
 }
+
+// async function _fetchMovie(payload) {
+//   return await axios.post('/.netlify/functions/movie', payload)
+// }
